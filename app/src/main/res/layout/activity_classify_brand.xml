@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/bg_classify_list"
+    tools:context="com.example.cm.juyiz.ui.activity.ClassifyBrandActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:padding="20px"
+        android:background="@color/black">
+        <ImageView
+            android:id="@+id/iv_classifybrand_back"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back"/>
+        <TextView
+            android:id="@+id/tv_classifybrand_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="品牌"
+            android:textSize="32px"
+            android:textColor="@color/white"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/linear_classifybrand"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_classifybrand_banner"
+        layout="@layout/layout_banner" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_classifybrand_default"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="默认"
+            android:background="@drawable/press_buttom"
+            android:textColor="#222"
+            android:textSize="28px" />
+        <View
+            style="@style/divider_vertical"
+            android:layout_width="2px"
+            android:layout_height="56px" />
+        <TextView
+            android:id="@+id/tv_classifybrand_sales"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="销量"
+            android:background="@drawable/press_buttom"
+            android:textColor="#222"
+            android:textSize="28px" />
+        <View
+            style="@style/divider_vertical"
+            android:layout_width="2px"
+            android:layout_height="56px" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/linear_classifybrand_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/press_buttom"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="价格"
+                android:textColor="#222"
+                android:textSize="28px" />
+            <ImageView
+                android:id="@+id/iv_classifybrand_price"
+                android:layout_width="15px"
+                android:layout_height="28px"
+                android:layout_marginLeft="5px"
+                android:background="@drawable/selector_price" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        style="@style/divider_horizontal" />
+    <GridView
+        android:id="@+id/grid_classify_brand"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8px"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent">
+    </GridView>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <!--没网络布局-->
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/linear_classifybrand_notnet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_width="400px"
+            android:layout_height="400px"
+            android:layout_marginTop="100px"
+            android:src="@drawable/notnet" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="您的手机网络好像不太顺畅"
+            android:textSize="40px"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="请检查您的手机是否联网"
+            android:textSize="30px"
+            android:layout_marginTop="20px"/>
+
+        <TextView
+            android:id="@+id/tv_againloading"
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:gravity="center"
+            android:text="重新加载"
+            android:textSize="35px"
+            android:background="@drawable/shape_login_bg"
+            android:layout_marginTop="50px"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,54 @@
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.HomeMainFragment">
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:id="@+id/list_home_main" />
+    <ImageView
+        android:id="@+id/iv_homemain_totop"
+        android:layout_width="52px"
+        android:layout_height="52px"
+        android:layout_margin="40px"
+        android:visibility="gone"
+        android:layout_gravity="right|bottom"
+        android:src="@drawable/homemain_totop"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/line_homemain_imgcount"
+        android:layout_width="52px"
+        android:layout_height="52px"
+        android:layout_margin="40px"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:background="@drawable/homemain_imgnum"
+        android:layout_gravity="right|bottom">
+        <TextView
+            android:id="@+id/tv_homemain_listnum"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:text="1"
+            android:textSize="20px"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_homemain_listtotal"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:text="100"
+            android:textColor="@color/white"
+            android:textSize="20px"
+            android:layout_height="wrap_content" />
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoFrameLayout>
+</com.zhy.autolayout.AutoLinearLayout>

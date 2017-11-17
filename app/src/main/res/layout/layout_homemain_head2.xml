@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_marginTop="10px"
+        android:layout_width="match_parent"
+        android:layout_height="256px"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv_homemain_activity1"
+            android:layout_width="479px"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:scaleType="fitXY"
+            android:src="@drawable/loading_product"/>
+        <View
+            style="@style/divider_vertical" />
+        <ImageView
+            android:id="@+id/iv_homemain_activity2"
+            android:layout_width="240px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/loading_product"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+    <View
+        style="@style/divider_horizontal" />
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="256px"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_homemain_activity3"
+            android:layout_width="240px"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:layout_weight="1"
+            android:src="@drawable/loading_product"/>
+
+        <View
+            style="@style/divider_vertical" />
+        <ImageView
+            android:id="@+id/iv_homemain_activity4"
+            android:layout_width="239px"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:layout_weight="1"
+            android:src="@drawable/loading_product"/>
+        <View
+            style="@style/divider_vertical" />
+        <ImageView
+            android:id="@+id/iv_homemain_activity5"
+            android:layout_width="240px"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:layout_weight="1"
+            android:src="@drawable/loading_product"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.example.cm.juyiz.customwidget.ListView4ScrollView
+        android:id="@+id/list_homemain_advertise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+    </com.example.cm.juyiz.customwidget.ListView4ScrollView>
+    <TextView
+        android:id="@+id/tv_homemain_hot"
+        android:layout_width="match_parent"
+        android:layout_height="156px"
+        android:text="超值热卖"
+        android:gravity="center"
+        android:textSize="36px"
+        android:textColor="@color/tv_black"
+        android:layout_marginTop="10px"
+        android:background="@color/white"/>
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <View style="@style/divider_horizontal" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/address_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#FFFFFF"
+            android:orientation="horizontal">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140px"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32px"
+                    android:layout_marginTop="20px"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/address_consignee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="王小明"
+                        android:textSize="24px" />
+
+                    <TextView
+                        android:id="@+id/address_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50px"
+                        android:text="13888888888"
+                        android:textSize="24px" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/address_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50px"
+                        android:text="默认地址"
+                        android:textColor="@color/red"
+                        android:textSize="30px" />
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <TextView
+                    android:id="@+id/address_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginTop="10px"
+                    android:text="福建泉州市丰泽区宝洲路万达福建泉州市丰泽区宝洲路万达福建泉州市丰泽区宝洲路万达福建泉州市丰泽区宝洲路万达"
+                    android:textSize="24px" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View style="@style/divider_horizontal" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="72px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/address_setdefault"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="设为默认地址"
+                android:textSize="28px" />
+
+            <View style="@style/divider_vertical" />
+
+            <TextView
+                android:id="@+id/address_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="编辑"
+                android:textSize="28px" />
+
+            <View style="@style/divider_vertical" />
+
+            <TextView
+                android:id="@+id/address_delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="删除"
+                android:textSize="28px" />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View style="@style/divider_horizontal" />
+
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,592 @@
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_classify_list"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.MineFragment">
+
+    <TextView
+        android:id="@+id/tv_mine_title"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="个人中心"
+        android:textColor="@color/white"
+        android:textSize="32px" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="216px"
+                android:background="#323232"
+                android:orientation="horizontal">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_mine_userhead"
+                        android:layout_width="108px"
+                        android:layout_height="108px"
+                        android:background="@drawable/login" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_mine_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="30px" />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ID:"
+                            android:textColor="#666"
+                            android:textSize="26px" />
+
+                        <TextView
+                            android:id="@+id/tv_mine_userid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#666"
+                            android:textSize="26px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="消费:"
+                            android:textColor="#666"
+                            android:textSize="26px" />
+
+                        <TextView
+                            android:id="@+id/tv_mine_usermoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#666"
+                            android:textSize="26px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:layout_weight="1"
+                        android:text="我的订单"
+                        android:textColor="@color/tv_black" />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/linear_mine_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="40px"
+                        android:paddingRight="40px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40px"
+                            android:text="查看全部订单"
+                            android:textColor="#bbb"
+                            android:textSize="24px" />
+
+                        <ImageView
+                            android:layout_width="24px"
+                            android:layout_height="24px"
+                            android:background="@drawable/mine_order" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View style="@style/divider_horizontal" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="152px">
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/linear_mine_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64px"
+                            android:layout_height="64px"
+                            android:background="@drawable/mine_obligation" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="待付款"
+                            android:textColor="#8b8b8b"
+                            android:textSize="22px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <View style="@style/divider_vertical" />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/linear_mine_pending"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64px"
+                            android:layout_height="64px"
+                            android:background="@drawable/mine_pending" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="待发货"
+                            android:textColor="#8b8b8b"
+                            android:textSize="22px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <View style="@style/divider_vertical" />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/linear_mine_tobereceived"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64px"
+                            android:layout_height="64px"
+                            android:background="@drawable/mine_tobereceived" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="待收货"
+                            android:textColor="#8b8b8b"
+                            android:textSize="22px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <View style="@style/divider_vertical" />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/linear_mine_refunds"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64px"
+                            android:layout_height="64px"
+                            android:background="@drawable/mine_return" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="退换货"
+                            android:textColor="#8b8b8b"
+                            android:textSize="22px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <!--会员专享 暂不用-->
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/linear_mine_vipbanner"
+                android:layout_width="720px"
+                android:layout_height="184px"
+                android:layout_marginTop="10px"
+                android:background="#ffffff"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/mine_member" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:layout_weight="1"
+                        android:text="分享赚钱"
+                        android:textColor="@color/tv_black" />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/linear_mine_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="40px"
+                        android:paddingRight="40px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40px"
+                            android:text="推广二维码"
+                            android:textColor="#bbb"
+                            android:textSize="24px" />
+
+                        <ImageView
+                            android:layout_width="24px"
+                            android:layout_height="24px"
+                            android:background="@drawable/mine_order" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View style="@style/divider_horizontal" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="152px">
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/linear_mine_reward"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_mine_reward"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0元"
+                            android:textColor="#222"
+                            android:textSize="28px" />
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20px"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="36px"
+                                android:layout_height="36px"
+                                android:background="@drawable/mine_reward" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10px"
+                                android:gravity="center"
+                                android:text="奖励"
+                                android:textColor="#666"
+                                android:textSize="22px" />
+                        </com.zhy.autolayout.AutoLinearLayout>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <View style="@style/divider_vertical" />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/linear_mine_fans"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_mine_fans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0人"
+                            android:textColor="#222"
+                            android:textSize="28px" />
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20px"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="36px"
+                                android:layout_height="36px"
+                                android:background="@drawable/mine_fans" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10px"
+                                android:gravity="center"
+                                android:text="粉丝"
+                                android:textColor="#666"
+                                android:textSize="22px" />
+                        </com.zhy.autolayout.AutoLinearLayout>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <View style="@style/divider_vertical" />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/linear_mine_sale"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_mine_sale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0元"
+                            android:textColor="#222"
+                            android:textSize="28px" />
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20px"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="36px"
+                                android:layout_height="36px"
+                                android:background="@drawable/mine_bonus" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10px"
+                                android:gravity="center"
+                                android:text="销售额"
+                                android:textColor="#666"
+                                android:textSize="22px" />
+                        </com.zhy.autolayout.AutoLinearLayout>
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View style="@style/divider_horizontal" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_mine_binder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="#bbb"
+                        android:textSize="24px" />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/linear_mine_binding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="50px"
+                        android:paddingRight="50px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="绑定推荐者"
+                            android:textColor="#bbb"
+                            android:textSize="24px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10px"
+                android:layout_marginTop="10px"
+                android:background="#ffffff"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/linear_mine_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:text="我的地址"
+                        android:textColor="@color/tv_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="24px"
+                        android:layout_height="24px"
+                        android:layout_marginRight="40px"
+                        android:background="@drawable/mine_order" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View style="@style/divider_horizontal" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/linear_mine_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:text="服务热线"
+                        android:textColor="@color/tv_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40px"
+                        android:text="400-123-888" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View style="@style/divider_horizontal" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/linear_mine_onlineservice"
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:text="在线客服"
+                        android:textColor="@color/tv_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="24px"
+                        android:layout_height="24px"
+                        android:layout_marginRight="40px"
+                        android:background="@drawable/mine_order" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View style="@style/divider_horizontal" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/linear_mine_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:text="退出登录"
+                        android:textColor="@color/tv_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="24px"
+                        android:layout_height="24px"
+                        android:layout_marginRight="40px"
+                        android:background="@drawable/mine_order" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </ScrollView>
+
+</com.zhy.autolayout.AutoLinearLayout>

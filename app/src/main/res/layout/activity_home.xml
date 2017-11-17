@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.cm.juyiz.ui.activity.HomeActivity">
+
+    <com.example.cm.juyiz.util.MyViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    </com.example.cm.juyiz.util.MyViewPager>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/linear_tab_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_tab_home"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_weight="1"
+                android:src="@drawable/tab_main_home"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/linear_tab_classify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_tab_classify"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_weight="1"
+                android:src="@drawable/tab_main_goods"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rela_tab_shopping"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/linear_tab_shopping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/iv_tab_shopping"
+                    android:layout_width="60px"
+                    android:layout_height="60px"
+                    android:layout_weight="1"
+                    android:src="@drawable/tab_main_shopping"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+            <TextView
+                android:id="@+id/tv_tab_shopping_num"
+                android:layout_width="25px"
+                android:layout_height="25px"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/linear_tab_shopping"
+                android:layout_marginLeft="-85px"
+                android:gravity="center"
+                android:textSize="12px"
+                android:textColor="@color/white"
+                android:background="@drawable/shape_shopping_tabbg">
+            </TextView>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/linear_tab_mine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_tab_mine"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_weight="1"
+                android:src="@drawable/tab_main_mine"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

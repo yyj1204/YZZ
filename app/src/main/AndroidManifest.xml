@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cm.juyiz">
+
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".app.APP"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.activity.WelcomeActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.activity.HomeActivity" />
+
+        <!-- 定制图片缓存路径 -->
+        <meta-data
+            android:name="com.example.cm.juyiz.util.GlideCache"
+            android:value="GlideModule" />
+
+        <!-- 屏幕适配 -->
+        <meta-data
+            android:name="design_width"
+            android:value="720" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+
+
+        <service android:name="com.qiangxi.checkupdatelibrary.service.DownloadService" />
+
+        <activity android:name=".ui.activity.SearchActivity" />
+        <activity android:name=".ui.activity.DetailsActivity" />
+        <activity android:name=".ui.activity.OrderActivity" />
+        <activity android:name=".ui.activity.OrderDetailActivity" />
+        <activity android:name=".ui.activity.OrderRefundsActivity" />
+        <activity android:name=".ui.activity.OrderRefundesListActivity" />
+        <activity android:name=".ui.activity.RefundesDetailActivity" />
+        <activity android:name=".ui.activity.SearchResultActivity" />
+        <activity android:name=".ui.activity.VIPActivity" />
+        <activity android:name=".ui.activity.NewReleaseActivity" />
+        <activity android:name=".ui.activity.AddressManageActivity" />
+        <activity android:name=".ui.activity.AddAddressActivity" />
+        <activity android:name=".ui.activity.OrderDetailActivity2" />
+        <activity android:name=".ui.activity.PayActivity" />
+
+        <!-- 商城首页相关界面 -->
+        <activity android:name=".ui.activity.HomeMessageActivity" />
+        <activity android:name=".ui.activity.HomeTimedSpecialsActivity" />
+        <activity android:name=".ui.activity.HomeRecommendActivity" />
+        <activity android:name=".ui.activity.HomeNewReleaseActivity" />
+        <activity android:name=".ui.activity.HomeRankingActivity" />
+        <activity android:name=".ui.activity.HomeVIPActivity" />
+        <activity android:name=".ui.activity.HomeHotActivity" />
+        <!-- 我的消息相关界面 -->
+        <activity android:name=".ui.activity.MessageRewardActivity" />
+        <activity android:name=".ui.activity.MessageFansActivity" />
+        <!-- 搜索相关界面 -->
+
+
+        <activity android:name=".ui.activity.AgreementActivity" />
+
+        <!-- 物流 -->
+        <activity android:name=".ui.activity.LogisticsActivity" />
+
+        <!-- 个人中心相关界面 -->
+        <activity android:name=".ui.activity.MineShareActivity" />
+        <activity android:name=".ui.activity.MineRewardActivity" />
+        <activity android:name=".ui.activity.MineFansActivity" />
+        <activity android:name=".ui.activity.MineSalesActivity" />
+        <activity
+            android:name=".ui.activity.BindDialogActivity"
+            android:theme="@style/DialogTheme" />
+
+        <!-- 奖励相关界面 -->
+        <activity android:name=".ui.activity.RewardCertificationActivity" />
+        <activity android:name=".ui.activity.RewardApplyActivity" />
+        <activity android:name=".ui.activity.RewardRecordActivity" />
+        <activity android:name=".ui.activity.ClassifyActivity" />
+        <activity android:name=".ui.activity.ShoppingActivity" />
+        <activity android:name=".ui.activity.LoginActivity" />
+        <activity android:name=".ui.activity.RegistActivity" />
+        <activity android:name=".ui.activity.PayResultActivity" />
+
+        <!-- 客服 -->
+        <activity
+            android:name=".kf_moor.chat.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".kf_moor.chat.OfflineMessageActicity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".kf_moor.chat.ImageViewLookActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.moor.imkf.tcpservice.service.IMService" />
+
+        <receiver android:name="com.moor.imkf.receiver.NetWorkReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 自己定义消息接收的广播 -->
+        <receiver
+            android:name=".kf_moor.receiver.NewMsgReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="2147483647">
+                <action android:name="com.example.cm.juyiz.kf" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ui.activity.CustomActivity" />
+        <activity android:name=".ui.activity.ClassifyBrandActivity" />
+
+        <!--支付宝支付-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+
+        <!--更新兼容android6.0-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.cm.juyiz"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/checkupdatelibrary_uri_grant" />
+        </provider>
+
+    </application>
+
+</manifest>
+

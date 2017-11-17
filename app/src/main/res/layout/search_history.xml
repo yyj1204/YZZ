@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/search_history_tv"
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:gravity="center_vertical"
+            android:text="果汁"
+            android:textColor="#666"
+            android:textSize="28px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:layout_marginBottom="2px"
+            android:background="@drawable/dash_line"
+            android:layerType="software" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

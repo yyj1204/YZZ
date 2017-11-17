@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_main_indicator"
+        android:layout_width="60px"
+        android:layout_height="60px"
+        android:layout_marginTop="10px"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/tab_main_home" />
+
+    <TextView
+        android:id="@+id/tv_main_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="商城首页"
+        android:textSize="22px"
+        android:layout_marginTop="10px"
+        android:layout_marginBottom="10px"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/iv_main_indicator"
+        android:textColor="@color/text_selector_classify" />
+
+        <TextView
+            android:id="@+id/tv_mainshopping_indicator"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_marginTop="10px"
+            android:layout_toRightOf="@+id/iv_main_indicator"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="-20px"
+            android:gravity="center"
+            android:textSize="14px"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:background="@drawable/shape_shopping_tabbg">
+        </TextView>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

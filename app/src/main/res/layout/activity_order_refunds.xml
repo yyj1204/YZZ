@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0e0e0"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/order_break"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/order_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:gravity="center"
+            android:text="退货退款"
+            android:textColor="@color/white"
+            android:textSize="32px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="188px"
+                android:background="#323232"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:text="待付款"
+                    android:textColor="#FFF"
+                    android:textSize="30px" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="订单编号："
+                        android:textColor="#FFFFFF"
+                        android:textSize="24px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SH2017061917530221583"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24px" />
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="时间:"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2017-06-19 17:53:25"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24px" />
+
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:layout_marginLeft="30px"
+                    android:gravity="center_vertical"
+                    android:text="商品列表"
+                    android:textColor="#222"
+                    android:textSize="24px" />
+
+                <View style="@style/divider_horizontal" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/goods_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退款金额：" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥200" />
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View style="@style/divider_horizontal" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退款类型：" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="300px"
+                        android:layout_height="60px"
+                        android:gravity="center_vertical|right">
+
+                        <RadioGroup
+                            android:id="@+id/refundes_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/refundes"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/order_refundes_life"
+                                android:button="@null"
+                                android:checked="true"
+                                android:gravity="center"
+                                android:text="仅退款"
+                                android:textColor="#FFF"
+                                android:textSize="24px" />
+
+                            <RadioButton
+                                android:id="@+id/returngoods"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/order_refundes_right"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="退货并退款"
+                                android:textColor="#000"
+                                android:textSize="24px" />
+                        </RadioGroup>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View style="@style/divider_horizontal" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/refundes_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退款原因：" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="多拍/拍错" />
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View style="@style/divider_horizontal" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="280px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退款说明：" />
+
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200px"
+                        android:layout_marginTop="10px"
+                        android:background="@drawable/rounded_rectangle"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10px"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:inputType="textMultiLine"
+                            android:maxLines="5" />
+
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View style="@style/divider_horizontal" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="280px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10px"
+                        android:text="上传截图：" />
+
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10px"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/refundes_img1"
+                            android:layout_width="206px"
+                            android:layout_height="206px"
+                            android:layout_marginRight="20px"
+                            android:layout_weight="1"
+                            android:background="@drawable/order_refundes_img" />
+
+                        <ImageView
+                            android:id="@+id/refundes_img2"
+                            android:layout_width="206px"
+                            android:layout_height="206px"
+                            android:layout_marginRight="20px"
+                            android:layout_weight="1"
+                            android:background="@drawable/order_refundes_img"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/refundes_img3"
+                            android:layout_width="206px"
+                            android:layout_height="206px"
+                            android:layout_weight="1"
+                            android:background="@drawable/order_refundes_img"
+                            android:visibility="invisible" />
+
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:layout_marginBottom="30px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="50px"
+                    android:background="@drawable/refundes_subimt"
+                    android:text="提交"
+                    android:textColor="#FFF" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </ScrollView>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

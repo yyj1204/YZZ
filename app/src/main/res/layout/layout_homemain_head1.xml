@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/layout_homemain_banner"
+        layout="@layout/layout_banner" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28px"
+            android:textColor="@color/tv_black"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:text="热点信息"/>
+
+        <View
+            style="@style/divider_vertical"
+            android:layout_margin="10px"/>
+
+        <TextView
+            android:id="@+id/tv_homemain_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:textSize="28px"
+            android:textColor="@color/tv_black"
+            android:layout_margin="20px"
+            android:text=""/>
+    </com.zhy.autolayout.AutoLinearLayout>
+    
+</com.zhy.autolayout.AutoLinearLayout>

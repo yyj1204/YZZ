@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="36px"
+        android:layout_marginLeft="21px"
+        android:layout_marginRight="21px"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_classify_grid"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:scaleType="fitXY"
+            android:src="@drawable/loading_banner"/>
+        <TextView
+            android:id="@+id/tv1_classify_grid"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="14px"
+            android:text="传承百年世界名品"
+            android:textSize="28px"
+            android:textColor="@color/psts"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv2_classify_grid"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="10px"
+            android:text="传承百年世界名品"
+            android:textSize="28px"
+            android:textColor="@color/psts"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

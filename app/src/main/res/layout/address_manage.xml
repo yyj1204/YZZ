@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/order_detail_heads"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/address_break"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/order_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginRight="40px"
+            android:gravity="center"
+            android:text="管理地址"
+            android:textColor="@color/white"
+            android:textSize="32px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/adderss_add"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/address_add"
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:text="添加地址" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@drawable/mini_order" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View style="@style/divider_horizontal" />
+
+            <com.example.cm.juyiz.customwidget.ListView4ScrollView
+                android:id="@+id/address_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </com.example.cm.juyiz.customwidget.ListView4ScrollView>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </ScrollView>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

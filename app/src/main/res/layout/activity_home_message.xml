@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context="com.example.cm.juyiz.ui.activity.HomeMessageActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:padding="20px"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/iv_message_back"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="我的消息"
+            android:textSize="32px"
+            android:textColor="@color/white"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/linear_message_reward"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="96px"
+            android:layout_height="96px"
+            android:layout_marginLeft="26px"
+            android:src="@drawable/message_reward"/>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20px"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tv_black"
+                android:textSize="28px"
+                android:text="奖励" />
+
+            <TextView
+                android:id="@+id/tv_message_reward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/psts"
+                android:textSize="22px"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="暂无消息" />
+        </com.zhy.autolayout.AutoLinearLayout>
+        <TextView
+            android:id="@+id/tv_reward_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="26px"
+            android:textColor="@color/psts"
+            android:textSize="20px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_message" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/linear_message_fans"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="96px"
+            android:layout_height="96px"
+            android:layout_marginLeft="26px"
+            android:src="@drawable/message_fans"/>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20px"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tv_black"
+                android:textSize="28px"
+                android:text="粉丝" />
+
+            <TextView
+                android:id="@+id/tv_message_fans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/psts"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="22px"
+                android:text="暂无消息" />
+        </com.zhy.autolayout.AutoLinearLayout>
+        <TextView
+            android:id="@+id/tv_fans_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="26px"
+            android:textColor="@color/psts"
+            android:textSize="20px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_message" />
+</com.zhy.autolayout.AutoLinearLayout>

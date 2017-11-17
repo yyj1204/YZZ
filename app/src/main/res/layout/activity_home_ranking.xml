@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context="com.example.cm.juyiz.ui.activity.HomeRankingActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:padding="20px"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/iv_rank_back"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="排行榜"
+            android:textSize="32px"
+            android:textColor="@color/white"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/linear_rank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <RadioGroup
+        android:id="@+id/rg_rank"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_rank1"
+            android:layout_width="250px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="今日热销"
+            android:textSize="28px"
+            android:background="@drawable/press_buttom"
+            android:textColor="@color/text_selector_classify"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="2px"
+            android:layout_height="40px"
+            android:background="@color/line_message" />
+        <RadioButton
+            android:id="@+id/rb_rank2"
+            android:layout_width="250px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:textSize="28px"
+            android:background="@drawable/press_buttom"
+            android:textColor="@color/text_selector_classify"
+            android:text="七天热销"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="2px"
+            android:layout_height="40px"
+            android:background="@color/line_message" />
+        <RadioButton
+            android:id="@+id/rb_rank3"
+            android:layout_width="250px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="本月热销"
+            android:button="@null"
+            android:background="@drawable/press_buttom"
+            android:textSize="28px"
+            android:textColor="@color/text_selector_classify"
+            android:gravity="center" />
+    </RadioGroup>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/bgSystem" />
+    <ListView
+        android:id="@+id/list_rank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_weight="1"
+        android:listSelector="@android:color/transparent">
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_rank_nothing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="40px"
+        android:text="暂无商品"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <!--没网络布局-->
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/linear_rank_notnet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_width="400px"
+            android:layout_height="400px"
+            android:layout_marginTop="100px"
+            android:src="@drawable/notnet" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="您的手机网络好像不太顺畅"
+            android:textSize="40px"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="请检查您的手机是否联网"
+            android:textSize="30px"
+            android:layout_marginTop="20px"/>
+
+        <TextView
+            android:id="@+id/tv_againloading"
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:gravity="center"
+            android:text="重新加载"
+            android:textSize="35px"
+            android:background="@drawable/shape_login_bg"
+            android:layout_marginTop="50px"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

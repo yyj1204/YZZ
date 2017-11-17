@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_homemain_foot"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:text="已显示全部"
+        android:textColor="#666666"
+        android:background="@color/white"
+        android:gravity="center"/>
+
+</com.zhy.autolayout.AutoLinearLayout>

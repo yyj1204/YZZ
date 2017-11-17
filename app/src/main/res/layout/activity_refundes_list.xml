@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/order_break"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/order_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:gravity="center"
+            android:text="退货退款"
+
+            android:textColor="@color/white"
+            android:textSize="32px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.example.cm.juyiz.customwidget.PagerSlidingTabStrip
+        android:id="@+id/psts_order"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="#ffffff"
+        app:pstsTabTextSize="32px">
+
+    </com.example.cm.juyiz.customwidget.PagerSlidingTabStrip>
+
+    <View style="@style/divider_horizontal" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.activity.OrderActivity">
+
+    </android.support.v4.view.ViewPager>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:background="@color/black"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="20px">
+        <ImageView
+            android:id="@+id/iv_search_back"
+            android:layout_width="44px"
+            android:layout_height="44px"
+            android:src="@drawable/back" />
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20px"
+            android:layout_weight="1"
+            android:background="@drawable/shape_classifysearch_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical">
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20px"
+                android:background="@null"
+                android:singleLine="true"
+                android:textColor="@color/psts"
+                android:textSize="20px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+        <ImageView
+            android:id="@+id/search_search"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_marginLeft="20px"
+            android:src="@drawable/home_search" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/linear_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/linear_search_sub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/search_order0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="默认"
+            android:background="@drawable/press_buttom"
+            android:textColor="#222"
+            android:textSize="28px" />
+        <View
+            style="@style/divider_vertical"
+            android:layout_width="2px"
+            android:layout_height="56px" />
+        <TextView
+            android:id="@+id/search_order1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="销量"
+            android:background="@drawable/press_buttom"
+            android:textColor="#222"
+            android:textSize="28px" />
+        <View
+            style="@style/divider_vertical"
+            android:layout_width="2px"
+            android:layout_height="56px" />
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/search_order_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/press_buttom"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="价格"
+                android:textColor="#222"
+                android:textSize="28px" />
+            <ImageView
+                android:id="@+id/search_price_iv"
+                android:layout_width="15px"
+                android:layout_height="28px"
+                android:layout_marginLeft="5px"
+                android:background="@drawable/search_result_price" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <GridView
+        android:id="@+id/search_result_goods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16px"
+        android:paddingRight="16px"
+        android:horizontalSpacing="16px"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="16px">
+    </GridView>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <TextView
+        android:id="@+id/tv_search_nothing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="暂无搜索结果！"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:textSize="40px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <!--没网络布局-->
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/linear_search_notnet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_width="400px"
+            android:layout_height="400px"
+            android:layout_marginTop="100px"
+            android:src="@drawable/notnet" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="您的手机网络好像不太顺畅"
+            android:textSize="40px"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="请检查您的手机是否联网"
+            android:textSize="30px"
+            android:layout_marginTop="20px"/>
+
+        <TextView
+            android:id="@+id/tv_againloading"
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:gravity="center"
+            android:text="重新加载"
+            android:textSize="35px"
+            android:background="@drawable/shape_login_bg"
+            android:layout_marginTop="50px"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

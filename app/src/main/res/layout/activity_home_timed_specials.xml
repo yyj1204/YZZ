@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context="com.example.cm.juyiz.ui.activity.HomeTimedSpecialsActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:padding="20px"
+        android:background="@color/black">
+        <ImageView
+            android:id="@+id/iv_timed_back"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="限时特价"
+            android:textSize="32px"
+            android:textColor="@color/white"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/linear_timed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/linear_timed_sub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/rg_timed"
+                android:layout_width="match_parent"
+                android:layout_height="92px"
+                android:background="#3b3b3b"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_timed1"
+                    android:layout_width="144px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:text="08:00"
+                    android:textSize="30px"
+                    android:textColor="@color/white"
+                    android:background="@drawable/selector_timed_bg"
+                    android:gravity="center" />
+
+                <RadioButton
+                    android:id="@+id/rb_timed2"
+                    android:layout_width="144px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:textSize="30px"
+                    android:textColor="@color/white"
+                    android:background="@drawable/selector_timed_bg"
+                    android:text="11:00"
+                    android:gravity="center" />
+
+                <RadioButton
+                    android:id="@+id/rb_timed3"
+                    android:layout_width="144px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="14:00"
+                    android:button="@null"
+                    android:textSize="30px"
+                    android:textColor="@color/white"
+                    android:background="@drawable/selector_timed_bg"
+                    android:gravity="center" />
+
+                <RadioButton
+                    android:id="@+id/rb_timed4"
+                    android:layout_width="144px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:textSize="30px"
+                    android:textColor="@color/white"
+                    android:background="@drawable/selector_timed_bg"
+                    android:text="17:00"
+                    android:gravity="center" />
+
+                <RadioButton
+                    android:id="@+id/rb_timed5"
+                    android:layout_width="144px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:textSize="30px"
+                    android:textColor="@color/white"
+                    android:background="@drawable/selector_timed_bg"
+                    android:text="20:00"
+                    android:gravity="center" />
+            </RadioGroup>
+
+            <ListView
+                android:id="@+id/list_timed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none">
+            </ListView>
+        <!--部分时间段没活动-->
+        <ImageView
+            android:id="@+id/iv_notactivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/notactivity"
+            android:visibility="gone"
+            android:scaleType="fitXY"
+            android:layout_weight="1"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <!--整日都没活动-->
+    <ImageView
+        android:id="@+id/iv_timed_notactivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/notactivity"
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        android:layout_weight="1"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <!--没网络布局-->
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/linear_timed_notnet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_width="400px"
+            android:layout_height="400px"
+            android:layout_marginTop="100px"
+            android:src="@drawable/notnet" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="您的手机网络好像不太顺畅"
+            android:textSize="40px"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="请检查您的手机是否联网"
+            android:textSize="30px"
+            android:layout_marginTop="20px"/>
+
+        <TextView
+            android:id="@+id/tv_againloading"
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:gravity="center"
+            android:text="重新加载"
+            android:textSize="35px"
+            android:background="@drawable/shape_login_bg"
+            android:layout_marginTop="50px"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

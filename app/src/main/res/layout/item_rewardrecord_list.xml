@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="150px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_record_list_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2017-06-25"
+                android:textSize="24px" />
+
+            <TextView
+                android:id="@+id/tv_record_list_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17:55:55"
+                android:textSize="24px" />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:id="@+id/tv_record_list_number"
+            android:layout_width="200px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="123456789123456789"
+            android:textColor="@color/tv_black"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_record_list_money"
+            android:layout_width="150px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="99.99"
+            android:textColor="@color/tv_black"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_record_list_state"
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="申请中"
+            android:textSize="24px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View style="@style/divider_horizontal" />
+</com.zhy.autolayout.AutoLinearLayout>

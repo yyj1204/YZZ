@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240px"
+        android:gravity="center_vertical"
+        android:padding="32px">
+
+        <ImageView
+            android:id="@+id/iv_timed_list"
+            android:layout_width="220px"
+            android:layout_height="176px"
+            android:scaleType="fitXY"
+            android:src="@drawable/loading_product"/>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="24px"
+            android:layout_toRightOf="@+id/iv_timed_list">
+
+            <TextView
+                android:id="@+id/tv_timed_title"
+                android:layout_width="424px"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="32px"
+                android:textColor="@color/tv_black"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_timed_countdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="32px"
+                android:gravity="right"
+                android:layout_marginTop="10px"
+                android:textColor="@color/tv_message"
+                android:text=""/>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10px"
+                android:orientation="horizontal">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="40px"
+                        android:textColor="@color/tv_black"
+                        android:text="¥"/>
+                    <TextView
+                        android:id="@+id/tv_timed_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="40px"
+                        android:layout_marginLeft="30px"
+                        android:textColor="@color/red"
+                        android:text=""/>
+                    <TextView
+                        android:id="@+id/tv_timed_original"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="30px"
+                        android:layout_below="@+id/tv_timed_price"
+                        android:textColor="@color/tv_message"
+                        android:text="¥"/>
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_timed_purchase"
+                    android:layout_width="166px"
+                    android:layout_height="62px"
+                    android:textSize="28px"
+                    android:gravity="center"
+                    android:background="@color/red"
+                    android:textColor="@color/white"
+                    android:text="立即抢购"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

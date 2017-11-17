@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="256px"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="10px">
+
+        <ImageView
+            android:id="@+id/iv_details_hot1"
+            android:layout_width="256px"
+            android:layout_height="256px"
+            android:scaleType="fitXY"
+            android:src="@drawable/loading_product"/>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="20px">
+            <TextView
+                android:id="@+id/tv_details_hot_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22px"
+                android:text="【送同款】马来西亚进口茱蒂丝三明治夹心饼干道"
+                android:textColor="@color/tv_black"/>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20px"
+                android:layout_below="@+id/tv_details_hot_title">
+                <TextView
+                    android:id="@+id/tv_details_hot_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26px"
+                    android:text="¥79"
+                    android:layout_marginLeft="10px"
+                    android:textColor="@color/tv_black"/>
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_details_hot_original"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22px"
+                    android:text="¥ 298"
+                    android:layout_marginLeft="20px"
+                    android:textColor="#666666"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

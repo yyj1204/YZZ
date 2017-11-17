@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="336px"
+        android:layout_height="480px"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/search_item_img"
+            android:layout_width="336px"
+            android:layout_height="336px"
+            android:src="@drawable/loading_product" />
+
+        <View style="@style/divider_horizontal" />
+
+        <TextView
+            android:id="@+id/search_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="13px"
+            android:maxLines="2"
+            android:text="商品名称商品名称商品名称商品名称商品名称"
+            android:textColor="#222"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/search_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="13px"
+            android:text="￥200"
+            android:textColor="#FF0000"
+            android:textSize="28px" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

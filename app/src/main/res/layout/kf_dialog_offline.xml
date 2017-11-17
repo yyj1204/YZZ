@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offline_bg"
+    android:orientation="vertical">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="离线留言"
+            android:textColor="@color/all_white"
+            android:textSize="36px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:text="请留言,我们将尽快联系您!"
+        android:textColor="@color/all_black"
+        android:textSize="34px" />
+
+    <EditText
+        android:id="@+id/id_et_content"
+        android:layout_width="match_parent"
+        android:layout_height="180px"
+        android:layout_marginBottom="10px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="10px"
+        android:background="@drawable/kf_offlinedialog_et_bg"
+        android:gravity="top"
+        android:hint="请留言~"
+        android:maxLines="6"
+        android:minLines="6"
+        android:paddingLeft="8px" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:text="请务必留下您的联系方式,方便我们联系您"
+        android:textColor="@color/all_black"
+        android:textSize="34px" />
+
+    <EditText
+        android:id="@+id/id_et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="10px"
+        android:background="@drawable/kf_offlinedialog_et_bg"
+        android:hint="输入手机号"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:minLines="1"
+        android:padding="10px" />
+
+    <EditText
+        android:id="@+id/id_et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="10px"
+        android:background="@drawable/kf_offlinedialog_et_bg"
+        android:hint="输入邮箱号"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:minLines="1"
+        android:padding="4dp" />
+
+
+    <Button
+        android:id="@+id/id_btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        android:layout_margin="16dp"
+        android:background="@color/black"
+        android:text="提交留言"
+        android:textColor="@color/white"
+        android:textSize="32px" />
+
+</com.zhy.autolayout.AutoLinearLayout>
